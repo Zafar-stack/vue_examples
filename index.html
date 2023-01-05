@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+</head>
+<body>
+
+<!-- <div id="app" v-bind:title="message">
+	<h2><p>{{ product }}</p></h2>
+	<button v-on:click="reverseMessage">Reverse Message</button>
+	<input v-model="product">
+	<ol>
+		<todo-item></todo-item>
+		<todo-item></todo-item>
+		<todo-item
+	        v-for="item in groceryList"
+	        v-bind:todo="item"
+	        v-bind:key="item.id">
+        </todo-item>
+	</ol>
+
+	<div id="app" v-bind:title="message">
+        {{ message }}
+    </div>
+</div> -->
+
+<!-- 
+<div id="app">
+            
+            <h1>{{ title }}</h1>
+            
+            <p>{{ description }}</p>
+            
+            <a :href="link">{{ linkText }}</a>
+            
+        </div>
+ -->
+
+<!-- <div id="app">
+	<input name="field" v-model="field">
+	<p>The current value is : {{ exclamation }}</p>
+</div> -->
+
+
+		<!-- <div id="app">
+            
+            <input name="field" v-model="fullName">
+            
+            <p>The current firstName value is: {{ firstName }}</p>
+            <p>The current lastName value is: {{ lastName }}</p>
+            
+        </div>	 -->
+
+        <!-- <div id="app">
+            <input name="field" v-model="field" />
+            <p>The current value is {{ field }}</p>
+            <button @click="modified">Click ME</button>
+        </div> -->
+
+
+
+<!--         <div id="app">
+            <h1>Contact Form</h1>
+            <form method="post" action="#">
+                <div>
+                    <label for="name">Name</label>
+                    <input name="name" id="name" v-model="name" />
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input name="email" id="email" v-model="email" />
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" v-model="message"></textarea>
+                </div>
+            </form>
+            <h2>Form Details</h2>
+            <p><strong>Name: </strong> {{ name }} </p>
+            <p><strong>Email: </strong> {{ email }} </p>
+            <p><strong>Message: </strong> {{ message }} </p>
+        </div> -->
+
+
+        <!-- <div id="app">
+            <h1>Contact Form</h1>
+            <p style="color: red;"> {{ error }} </p>
+            <form method="post" action="#">
+                <div>
+                    <label for="name">Name</label>
+                    <input name="name" id="name" v-model="form.name" />
+                    <p style="color: red;"> {{ nameValidation }} </p>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input name="email" id="email" v-model="form.email" />
+                    <p style="color: red;"> {{ emailValidation }} </p>
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" v-model="form.message"></textarea>
+                    <p style="color: red;"> {{ messageValidation }} </p>
+                </div>
+                <button @click.prevent="validateForm">Send Form</button>
+            </form>
+            <h2>Form Details</h2>
+            <p><strong>Name</strong> {{ form.name }}</p>
+            <p><strong>Email</strong> {{ form.email }}</p>
+            <p><strong>Message</strong> {{ form.message }}</p>
+        </div> -->
+
+
+<!-- 
+        <div id="app" class="bg-blue-300 flex flex-col justify-center items-center h-screen w-full text-sm">
+          <template v-if="boxShow" >
+            <div class="w-20 h-20 bg-red-700">&nbsp;</div>
+            <div class="w-20 h-20 bg-red-700">&nbsp;</div>
+            <div class="w-20 h-20 bg-red-700">&nbsp;</div>
+          </template>
+
+          <div v-if="number < 5" class="w-20 h-20 bg-red-700">&nbsp;</div>
+          <div v-else-if="number > 10" class="w-20 h-20 bg-gray-700">&nbsp;</div>
+          <div v-else class="w-20 h-20 bg-green-700">&nbsp;</div>
+        </div> -->
+
+
+
+        <!-- <div id="app" class="bg-blue-300 h-screen w-full flex justify-center items-center text-sm relative">
+          <div v-if="modal" class="absolute top-0 w-full bg-green-200 text-center py-2">
+            Here's some more information. <button @click.prevent="modal = false">X</button>
+          </div>
+          <button @click.prevent="modal = !modal">{{ modal ? 'Close' : 'Open' }} Model</button>
+        </div> -->
+
+
+
+
+        <!-- <div id="app" class="bg-blue-300 h-screen w-full flex flex-col justify-center items-center text-sm relative">
+            
+            <p class="text-xs mb-8">0-5 = GOOD; 6-8 = WARNING; 9-10 = DANGER</p>
+            <p>Current Status: {{ status }}</p>
+            
+            <div v-if="status >=0 && status <=5" class="w-32 bg-green-200 text-center py-2">
+                GOOD
+            </div>
+            
+            <div v-else-if="status > 5 && status <=8" class="w-32 bg-yellow-200 text-center py-2">
+                WARNING
+            </div>
+            
+            <div v-else class="w-32 bg-red-200 text-center py-2">
+                DANGER
+            </div>
+            
+            <div class="text-xl mt-4">
+                <button v-if="status > 0" @click.prevent="decrement" class="px-3 border rounded">-</button>
+                <button v-if="status < 10" @click.prevent="increment" class="px-3 border rounded">+</button>
+            </div>
+            
+        </div> -->
+
+
+
+        <!-- <div id="app" class="bg-blue-300 h-screen w-full flex flex-col justify-center items-center text-sm relative">
+          <select>
+            <option>Please select one</option>
+            <option v-for="item in list" value="item.age" v-text="item.name"></option>
+          </select>
+        </div> -->
+
+
+
+
+        <!-- <div id="app" class="bg-blue-300 h-screen w-full flex flex-col pt-12 items-center text-sm relative">
+            <h1 class="mb-3 font-bold uppercase">My Todo List</h1>
+            <div class="mb-4">
+                <input v-model="item" />
+                <button @click.prevent="addItem">Add</button>
+            </div>
+            <div>
+                <ul>
+                    <li v-for="item in items">{{ item }}</li>
+                </ul>
+            </div>
+        </div> -->
+
+       <!--  <style>
+            .danger {
+                color: red;
+            }
+            .active {
+                color: green;
+            }
+        </style>
+
+        <div id="app" class="bg-blue-300 h-screen w-full flex flex-col justify-center items-center text-sm relative">
+            <div :class="styling">Text</div>
+        </div> -->
+
+
+
+<!-- 
+        <div id="app">
+           <nav class="nav-wrapper">
+             <div class="logo">
+               Vue
+             </div>
+             <div class="flex">
+              <div v-for="item in nav" >
+               <a :href="item.link" 
+                  class="link-item" 
+                  :class="[(item.subLinkModal) ? 'link-active' : '' ]"
+                  @click="toggleSubModal(item)">
+                  {{ item.title }}
+                </a>
+               <template v-if="item.sublinks && item.subLinkModal">
+                 <div class="sublinks">
+                   <a  v-for="sublink in item.sublinks" :href="sublink.link" class="link-item">
+                     {{ sublink.title }}
+                   </a>
+                 </div>
+               </template>
+             </div>
+             </div>
+           </nav> 
+           <div class="body-text">
+             Learning Vue
+           </div>
+        </div>
+ -->
+
+
+
+        <!-- <div id="app">
+            <first-component></first-component>
+        </div> -->
+
+
+
+        <!-- <div id="app" class="bg-blue-200 w-full h-screen ">
+            <title-text>
+                My Title
+                
+                <template v-slot:something>Another Text</template>
+            </title-text>
+        </div> -->
+
+
+
+
+
+        <div id="app" class="bg-blue-200 w-full h-screen ">
+            
+            <size-title text-size="25">Vue Bootcamp</size-title>
+             
+            <my-list :list="{ names: ['John', 'Jane', 'Mary'] }">My List of Names</my-list>
+            
+            <my-site>
+                <template v-slot:header>
+                    My Website Header Here
+                </template>
+                <template v-slot:body>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                </template>
+                <template v-slot:footer>
+                    &copy; 2020 Copyright
+                </template>
+            </my-site>
+            
+        </div>
+
+<script>
+      Vue.component('size-title', {
+        props: ['text-size'],
+
+        template: '<div :style="{ fontSize: textSize + \'px\' }"><slot></slot></div>'
+      });
+      Vue.component('my-list', {
+        props: ['list'],
+
+        template: '<div><h1><slot></slot></h1><ul><li v-for=""></li></ul></div>'
+      });
+
+
+      var app = new Vue ({
+        el: '#app',
+        data: {
+
+        }
+      });
+
+
+
+
+      // Vue.component('title-text', {
+      //           template: '<div><h1><slot></slot></h1><slot name="something"></slot></dif>'
+      //       });
+            
+      //       var app = new Vue({
+      //           el: '#app',
+      //           data: {
+                    
+      //           }
+      //       });
+
+
+
+      // Vue.component('first-component', {
+      //   template: '<div>Hello from Component {{ message }}</div>',
+      //   data: function () {
+      //     return {
+      //       message: 'Hello from Data'
+      //     }
+      //   }
+      // });
+
+
+
+      // var app = new Vue ({
+      //   el: '#app',
+      //   data: {
+
+      //   }
+      // });
+
+
+
+
+
+
+
+
+
+
+        // var app = new Vue({
+        //   el: '#app',
+        //   data: {
+        //     nav: [
+        //         { title: 'Home', link: '#home' },
+        //         { title: 'About', link: '#about' },
+        //         { title: 'Services', link: '#services', sublinks: [
+        //           { title: 'Audio', link: '#audio' },
+        //           { title: 'Video', link: '#video' },
+        //           { title: 'Web', link: '#web' },
+        //         ], subLinkModal: false, },
+        //     ]
+        //   },
+        //   methods: {
+        //     toggleSubModal: function (item) {
+        //       if (item.sublinks) {
+        //         item.subLinkModal =! item.subLinkModal;
+        //       }
+        //     }
+        //   }
+        // });
+
+
+
+
+
+
+        // var app = new Vue ({
+        //   el: '#app',
+        //   data : {
+        //     size: 25,
+        //     toggle: true,
+        //     textColor: {
+        //       color: 'orange',
+        //     }
+        //   }
+        // });
+
+
+
+
+      // var app = 'new' Vue ({
+      //   el: '#app',
+      //   data: {
+      //     isDanger: false,
+      //     important: false,
+      //     myDiv: {'danger': true, 'font-bold': false}
+      //   },
+      //   computed: {
+      //     styling: function () {
+      //       return {
+      //         'danger': 25 < 5,
+      //       }
+      //     }
+      //   }
+      // });
+
+
+
+      // var app =new Vue({
+      //   el: '#app',
+      //   data: {
+      //     item: '',
+      //     items: []
+      //   },
+      //   methods: {
+      //     addItem: function () {
+      //       this.items.push(this.item);
+      //       this.item = '';
+      //     }
+      //   }
+      // });
+
+
+
+
+    // var app = new Vue({
+    //             el: '#app',
+    //             data: {
+    //                 list: [
+    //                     { name: 'John', age: 25 },
+    //                     { name: 'Jane', age: 20 },
+    //                 ]
+    //             }
+    //         });
+
+
+
+    // var app = new Vue({
+    //             el: '#app',
+    //             data: {
+    //               status: 0,   
+    //             },
+    //             methods: {
+    //               increment: function () {
+    //                 if (this.status >= 10) {
+    //                   return;
+    //                 }
+    //                 this.status++;
+    //               },
+    //               decrement: function () {
+    //                 if (this.status <= 0) {
+    //                   return;
+    //                 }
+    //                 this.status--;
+    //               }
+    //             }
+    //         });
+
+
+
+    // var app = new Vue({
+    //             el: '#app',
+    //             data: {
+    //                 modal: false,
+    //             }
+    //         });
+
+
+
+     // var app = new Vue({
+     //            el: '#app',
+     //            data: {
+     //                // box: 10,
+     //                number: 20,
+     //            },
+     //            // computed: {
+     //            //     boxShow: function () {
+     //            //         return this.box > 15;
+     //            //   }
+     //            // }
+     //        });
+
+
+    // var app = new Vue({
+    //             el: '#app',
+    //             data: {
+    //                 example: 'Learning Never Exhausts The Mind.',
+    //                 onlyOnce: 'I will not update!',
+    //                 sampleHtml: '<ul><li>Item 1</li><li>Item 2</li></ul>',
+    //                 text: 'Another way to output text!',
+    //                 answer: true,
+    //                 age: 9,
+    //                 circleRadius: 10,
+    //                 explain: 'Here is some text that explains this div.'
+    //             }
+    //         });
+
+
+
+			// var app = new Vue({
+   //              el: '#app',
+   //              data: {
+	  //               form : {
+	  //               	name: '',
+   //  	                email: '',
+   //  	                message: '',
+   //  	            },
+   //                  error: '',
+   //              },
+   //              methods: {
+   //              	validateForm: function () {
+   //              		if (this.form.name.length && this.form.email.length && this.form.message.length) {
+   //              			return this.error = 'Form sent!';
+   //              		}
+   //              		return this.error = 'Invalid Form!';
+   //              	}
+   //              },
+   //              computed: {
+   //              	nameValidation: function () {
+   //              		if (!this.form.name.length && this.error) {
+   //              			return 'Name field is required!';
+   //              		}
+   //              	},
+   //              	emailValidation: function () {
+   //              		if (!this.form.email.length && this.error) {
+   //              			return 'Email field is required!';
+   //              		}
+   //              	},
+   //              	messageValidation: function () {
+   //              		if (!this.form.message.length && this.error) {
+   //              			return 'Message field is required!';
+   //              		}
+   //              	},
+   //              }
+   //          });
+
+
+
+
+			// var app = new Vue({
+   //              el: '#app',
+   //              data: {
+   //                  name: '',
+   //                  email: '',
+   //                  message: '',
+   //              }
+   //          });
+
+
+
+
+			// var app = new Vue({
+   //              el: '#app',
+   //              data: {
+   //                  field: '',
+   //              },
+   //              methods: {
+   //                  modified: function () {
+   //                      this.field += '!';
+   //                  }
+   //              }
+   //          });
+
+
+
+			// var app = new Vue({
+   //              el: '#app',
+   //              data: {
+   //                  field: '',
+   //                  firstName: '',
+   //                  lastName: '',
+   //              },
+   //              computed: {
+   //                  fullName: {
+   //                      get: function () {
+   //                          return this.firstName + ' ' + this.lastName;
+   //                      },
+   //                      set: function (newValue) {
+   //                          var names = newValue.split(' ');
+                            
+   //                          this.firstName = names[0];
+   //                          this.lastName = names[1];
+   //                      }
+   //                  }
+   //              }
+   //          });
+
+
+
+
+
+
+
+
+
+	// var app = new Vue({
+	// 	el: '#app',
+	// 	data: {
+	// 		field: '',
+	// 	},
+	// 	computed: {
+	// 		exclamation: function () {
+	// 			return this.field + '!';
+	// 		}
+	// 	}
+	// });
+
+
+	// Vue.component('todo-item', {
+	//     props: ['todo'],
+	//     template: '<li>{{ todo.text }}</li>'
+	// })
+
+	// var app = new Vue({
+	//     el: '#app',
+	//     data: {
+	//       groceryList: [
+	//         { id: 0, text: 'Vegetables' },
+	//         { id: 1, text: 'Cheese' },
+	//         { id: 2, text: 'Whatever else humans are supposed to eat' }
+	//       ]
+	//     }
+	// })
+// var app = new Vue({
+//                 el: '#app',
+//                 data: {
+//                     title: 'Learning Vue on Scrimba',
+//                     description: 'This is an interactive lesson on how to remove the data from the DOM and put it on the Vue instance.',
+//                     link: 'https://vuejs.org/',
+//                     linkText: 'Visit Vue'
+//                 }
+//             });
+        		
+</script>
+
+
+</body>
+</html>
